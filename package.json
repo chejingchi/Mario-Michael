@@ -1,0 +1,11 @@
+{
+  "name": "Mario-Michael",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "https://github.com/chejingchi/Mario-Michael.git",
+  "author": "chejc <1020934146@qq.com>",
+  "license": "MIT",
+  "scripts": {
+    "build": "gitbook serve ./content ./docs"
+  }
+}
