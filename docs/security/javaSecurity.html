@@ -4,7 +4,7 @@
     <head>
         <meta charset="UTF-8">
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
-        <title>武汉游 · GitBook</title>
+        <title>java-security · GitBook</title>
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="description" content="">
         <meta name="generator" content="GitBook 3.2.3">
@@ -57,10 +57,10 @@
     <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
 
     
-    <link rel="next" href="../end/README.md" />
+    <link rel="next" href="../trip/" />
     
     
-    <link rel="prev" href="./" />
+    <link rel="prev" href="../java/" />
     
 
     </head>
@@ -284,9 +284,9 @@
             <ul class="articles">
                 
     
-        <li class="chapter " data-level="1.4.1" data-path="../security/javaSecurity.html">
+        <li class="chapter active" data-level="1.4.1" data-path="javaSecurity.html">
             
-                <a href="../security/javaSecurity.html">
+                <a href="javaSecurity.html">
             
                     
                     java-security
@@ -302,9 +302,9 @@
             
         </li>
     
-        <li class="chapter " data-level="1.5" data-path="./">
+        <li class="chapter " data-level="1.5" data-path="../trip/">
             
-                <a href="./">
+                <a href="../trip/">
             
                     
                     旅游
@@ -316,9 +316,9 @@
             <ul class="articles">
                 
     
-        <li class="chapter active" data-level="1.5.1" data-path="wuhan.html">
+        <li class="chapter " data-level="1.5.1" data-path="../trip/wuhan.html">
             
-                <a href="wuhan.html">
+                <a href="../trip/wuhan.html">
             
                     
                     武汉游
@@ -377,7 +377,7 @@
     <!-- Title -->
     <h1>
         <i class="fa fa-circle-o-notch fa-spin"></i>
-        <a href=".." >武汉游</a>
+        <a href=".." >java-security</a>
     </h1>
 </div>
 
@@ -392,8 +392,71 @@
     
                                 <section class="normal markdown-section">
                                 
-                                <h2 id="&#x6B66;&#x6C49;">&#x6B66;&#x6C49;</h2>
-<p><img src="assets/wuhan-22aef26c.png" alt=""></p>
+                                <h1 id="java-security">java security</h1>
+<h2 id="&#x4FE1;&#x606F;&#x6CC4;&#x9732;&#x95EE;&#x9898;">&#x4FE1;&#x606F;&#x6CC4;&#x9732;&#x95EE;&#x9898;</h2>
+<h3 id="&#x73B0;&#x8C61;">&#x73B0;&#x8C61;</h3>
+<p>&#x5982;&#x6CA1;&#x6709;&#x53CA;&#x65F6;&#x5220;&#x9664;&#x5F00;&#x53D1;&#x4EBA;&#x5458;&#x4F7F;&#x7528;&#x7684;&#x8C03;&#x8BD5;&#x9875;&#x9762;&#x7B49;&#x60C5;&#x51B5;&#xFF0C;&#x653B;&#x51FB;&#x8005;&#x6709;&#x638C;&#x63E1;&#x66F4;&#x591A;&#x4FE1;&#x606F;&#x7684;&#x53EF;&#x80FD;&#xFF0C;&#x4ECE;&#x800C;&#x53D1;&#x8D77;&#x6709;&#x6548;&#x653B;&#x51FB;</p>
+<h3 id="&#x89E3;&#x51B3;&#x65B9;&#x6848;">&#x89E3;&#x51B3;&#x65B9;&#x6848;</h3>
+<p>&#x5BF9;&#x4E8E;&#x6D4F;&#x89C8;&#x5668;&#x4E00;&#x4E2A;&#x76EE;&#x5F55;&#x6216;&#x6587;&#x4EF6;&#x7684;&#x670D;&#x52A1;&#x5668;&#x91CD;&#x5B9A;&#x5411;&#x5230;&#x81EA;&#x5B9A;&#x4E49;&#x7684;404&#x9519;&#x8BEF;&#x9875;&#x9762;&#xFF0C;&#x6216;&#x8005;&#x5220;&#x9664;&#x654F;&#x611F;&#x4FE1;&#x606F;&#x3002;
+&#x52A0;&#x4E2A;404&#x9875;&#x9762;
+web.mxl</p>
+<pre><code class="lang-xml">  <span class="hljs-tag">&lt;<span class="hljs-name">error-page</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">error-code</span>&gt;</span>404<span class="hljs-tag">&lt;/<span class="hljs-name">error-code</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">location</span>&gt;</span>/error/404.html<span class="hljs-tag">&lt;/<span class="hljs-name">location</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-name">error-page</span>&gt;</span>
+</code></pre>
+<h2 id="xss&#x653B;&#x51FB;">xss&#x653B;&#x51FB;</h2>
+<h3 id="&#x73B0;&#x8C61;">&#x73B0;&#x8C61;</h3>
+<p>&#x6076;&#x610F;&#x653B;&#x51FB;&#x8005;&#x5F80;Web&#x9875;&#x9762;&#x91CC;&#x63D2;&#x5165;&#x6076;&#x610F;&#x7684;Script&#x4EE3;&#x7801;&#xFF0C;&#x5F53;&#x7528;&#x6237;&#x6D4F;&#x89C8;&#x8BE5;&#x9875;&#x4E4B;&#x65F6;&#xFF0C;&#x5D4C;&#x5165;&#x5176;&#x4E2D;Web&#x91CC;&#x9762;&#x7684;Script&#x4EE3;&#x7801;&#x4F1A;&#x88AB;&#x6267;&#x884C;&#xFF0C;&#x4ECE;&#x800C;&#x8FBE;&#x5230;&#x6076;&#x610F;&#x653B;&#x51FB;&#x7528;&#x6237;&#x7684;&#x76EE;&#x7684;&#x3002;</p>
+<h3 id="&#x89E3;&#x51B3;&#x65B9;&#x6848;">&#x89E3;&#x51B3;&#x65B9;&#x6848;</h3>
+<p>XSSFilter.java
+XSSRequestWrapper.java</p>
+<h2 id="&#x8DE8;&#x7AD9;&#x70B9;&#x4F2A;&#x9020;&#x8BF7;&#x6C42;&#xFF08;csrf&#xFF09;">&#x8DE8;&#x7AD9;&#x70B9;&#x4F2A;&#x9020;&#x8BF7;&#x6C42;&#xFF08;CSRF&#xFF09;</h2>
+<h3 id="&#x73B0;&#x8C61;">&#x73B0;&#x8C61;</h3>
+<p>&#x522B;&#x4EBA;&#x53EF;&#x4EE5;&#x901A;&#x8FC7;form&#x8868;&#x5355;&#x7B49;&#x4E00;&#x7CFB;&#x5217;&#x65B9;&#x5F0F;&#xFF0C;&#x4F2A;&#x9020;&#x67D0;&#x4E00;&#x7AD9;&#x70B9;&#x7684;&#x8BF7;&#x6C42;&#xFF0C;&#x5C06;&#x6570;&#x636E;&#x8DE8;&#x7AD9;&#x70B9;&#x63D0;&#x4EA4;</p>
+<h3 id="&#x89E3;&#x51B3;&#x65B9;&#x6848;">&#x89E3;&#x51B3;&#x65B9;&#x6848;</h3>
+<ol>
+<li>&#x4F7F;&#x7528;POST&#x4EE3;&#x66FF;GET</li>
+<li>&#x68C0;&#x67E5;&#x5E76;&#x9A8C;&#x8BC1;HTTP Referer&#x5B57;&#x6BB5;</li>
+<li>&#x4F7F;&#x7528;Token&#x9A8C;&#x8BC1;&#x3002;</li>
+</ol>
+<h4 id="&#x68C0;&#x67E5;&#x5E76;&#x9A8C;&#x8BC1;http-referer&#x5B57;&#x6BB5;">&#x68C0;&#x67E5;&#x5E76;&#x9A8C;&#x8BC1;HTTP Referer&#x5B57;&#x6BB5;</h4>
+<ol>
+<li>referer&#x6821;&#x9A8C;&#xFF1A;</li>
+</ol>
+<pre><code class="lang-java">  <span class="hljs-comment">// &#x4ECE; HTTP &#x5934;&#x4E2D;&#x53D6;&#x5F97; Referer &#x503C;</span>
+  String referer = ((HttpServletRequest) servletRequest).getHeader(<span class="hljs-string">&quot;Referer&quot;</span>);
+</code></pre>
+<ol>
+<li>&#x6821;&#x9A8C;&#x81EA;&#x5DF1;&#x7684;referer&#x662F;&#x4E0D;&#x662F;&#x81EA;&#x5DF1;&#x60F3;&#x8981;&#x7684;</li>
+</ol>
+<ol>
+<li>web.xml&#x914D;&#x7F6E;filter</li>
+</ol>
+<pre><code class="lang-xml">    <span class="hljs-comment">&lt;!--&#x9A8C;&#x8BC1; Referer--&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">filter</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">filter-name</span>&gt;</span>refererFilter<span class="hljs-tag">&lt;/<span class="hljs-name">filter-name</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">filter-class</span>&gt;</span>***.RefererFilter<span class="hljs-tag">&lt;/<span class="hljs-name">filter-class</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-name">filter</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">filter-mapping</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">filter-name</span>&gt;</span>refererFilter<span class="hljs-tag">&lt;/<span class="hljs-name">filter-name</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">url-pattern</span>&gt;</span>/*<span class="hljs-tag">&lt;/<span class="hljs-name">url-pattern</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">dispatcher</span>&gt;</span>REQUEST<span class="hljs-tag">&lt;/<span class="hljs-name">dispatcher</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-name">filter-mapping</span>&gt;</span>
+</code></pre>
+<h2 id="&#x7591;&#x96BE;&#x6742;&#x75C7;">&#x7591;&#x96BE;&#x6742;&#x75C7;</h2>
+<h3 id="maven&#x4F7F;&#x7528;jre&#x7684;jar&#x5305;">maven&#x4F7F;&#x7528;jre&#x7684;jar&#x5305;</h3>
+<pre><code class="lang-xml">                    <span class="hljs-tag">&lt;<span class="hljs-name">compilerArgs</span>&gt;</span> 
+                        <span class="hljs-tag">&lt;<span class="hljs-name">arg</span>&gt;</span>-verbose<span class="hljs-tag">&lt;/<span class="hljs-name">arg</span>&gt;</span>
+                        <span class="hljs-tag">&lt;<span class="hljs-name">arg</span>&gt;</span>-Xlint:unchecked<span class="hljs-tag">&lt;/<span class="hljs-name">arg</span>&gt;</span>
+                  <span class="hljs-tag">&lt;<span class="hljs-name">arg</span>&gt;</span>-Xlint:deprecation<span class="hljs-tag">&lt;/<span class="hljs-name">arg</span>&gt;</span>
+                        <span class="hljs-comment">&lt;!--&lt;arg&gt;-bootclasspath&lt;/arg&gt;
+                        &lt;arg&gt;${env.JAVA_HOME}/jre/lib/rt.jar&lt;/arg&gt;
+                        &lt;arg&gt;${env.JAVA_HOME}/jre/lib/jce.jar&lt;/arg&gt;--&gt;</span>
+                        <span class="hljs-tag">&lt;<span class="hljs-name">arg</span>&gt;</span>-extdirs<span class="hljs-tag">&lt;/<span class="hljs-name">arg</span>&gt;</span> 
+              <span class="hljs-tag">&lt;<span class="hljs-name">arg</span>&gt;</span>${project.basedir}/WebContent/WEB-INF/lib<span class="hljs-tag">&lt;/<span class="hljs-name">arg</span>&gt;</span>
+                    <span class="hljs-tag">&lt;/<span class="hljs-name">compilerArgs</span>&gt;</span>
+</code></pre>
 
                                 
                                 </section>
@@ -421,12 +484,12 @@
 
             
                 
-                <a href="./" class="navigation navigation-prev " aria-label="Previous page: 旅游">
+                <a href="../java/" class="navigation navigation-prev " aria-label="Previous page: security">
                     <i class="fa fa-angle-left"></i>
                 </a>
                 
                 
-                <a href="../end/README.md" class="navigation navigation-next " aria-label="Next page: 结束">
+                <a href="../trip/" class="navigation navigation-next " aria-label="Next page: 旅游">
                     <i class="fa fa-angle-right"></i>
                 </a>
                 
@@ -437,7 +500,7 @@
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"武汉游","level":"1.5.1","depth":2,"next":{"title":"结束","level":"1.6","depth":1,"path":"end/README.md","ref":"end/README.md","articles":[]},"previous":{"title":"旅游","level":"1.5","depth":1,"path":"trip/README.md","ref":"trip/README.md","articles":[{"title":"武汉游","level":"1.5.1","depth":2,"path":"trip/wuhan.md","ref":"trip/wuhan.md","articles":[]}]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["livereload"],"pluginsConfig":{"livereload":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"trip/wuhan.md","mtime":"2019-05-01T10:13:15.403Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-06-27T09:37:25.597Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"java-security","level":"1.4.1","depth":2,"next":{"title":"旅游","level":"1.5","depth":1,"path":"trip/README.md","ref":"trip/README.md","articles":[{"title":"武汉游","level":"1.5.1","depth":2,"path":"trip/wuhan.md","ref":"trip/wuhan.md","articles":[]}]},"previous":{"title":"security","level":"1.4","depth":1,"path":"java/README.md","ref":"java/README.md","articles":[{"title":"java-security","level":"1.4.1","depth":2,"path":"security/javaSecurity.md","ref":"security/javaSecurity.md","articles":[]}]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["livereload"],"pluginsConfig":{"livereload":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"security/javaSecurity.md","mtime":"2019-05-28T03:16:02.505Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-06-27T09:37:25.597Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>

@@ -32,3 +32,14 @@ OrderComparator类：实现了Comparator接口的一个比较器。
 
 
 转载于[链接](https://segmentfault.com/a/1190000012455485)
+
+
+### spring 单例 解释
+例如Web应用中的Servlet，每个方法中对局部变量的操作都是在线程自己独立的内存区域内完成的，所以是线程安全的。 
+对于成员变量的操作，可以使用ThreadLocal来保证线程安全。 
+
+
+springMVC中，一般Controller、service、DAO层的scope均是singleton；
+
+每个请求都是单独的线程,即使同时访问同一个Controller对象，因为并没有修改Controller对象，相当于针对Controller对象而言，只是读操作，没有写操作，不需要做同步处理。
+[spring 单例解释](https://blog.csdn.net/pingdouble/article/details/79493846)
