@@ -428,39 +428,42 @@
 <h2 id="es6">es6</h2>
 <h3 id="let">let</h3>
 <ol>
-<li>let&#x547D;&#x4EE4;&#x548C;var&#x547D;&#x4EE4;&#x7C7B;&#x4F3C;&#xFF0C;&#x7528;&#x4E8E;&#x58F0;&#x660E;&#x53D8;&#x91CF;&#x3002;let&#x5728;es6&#x4E2D;&#x7528;&#x4E8E;&#x66FF;&#x4EE3;var&#x3002;let&#x547D;&#x4EE4;&#x58F0;&#x660E;&#x7684;&#x53D8;&#x91CF;&#x53EA;&#x5728;&#x5B83;&#x58F0;&#x660E;&#x7684;&#x4EE3;&#x7801;&#x5757;&#x4E2D;&#x751F;&#x6548;
-```javascript
-// &#x5728;for&#x5FAA;&#x73AF;&#x4E2D;&#xFF0C;let&#x8BBE;&#x7F6E;&#x5FAA;&#x73AF;&#x53D8;&#x91CF;&#x7684;&#x662F;&#x4E00;&#x4E2A;&#x7236;&#x7EA7;&#x4F5C;&#x7528;&#x57DF;&#xFF0C;&#x5FAA;&#x73AF;&#x4F53;&#x4E3A;&#x5B50;&#x7EA7;&#x4F5C;&#x7528;&#x57DF; 
-// &#x5728;for&#x5FAA;&#x73AF;&#x4E2D;&#xFF0C;let&#x58F0;&#x660E;&#x7684;i&#x6BCF;&#x6B21;&#x5FAA;&#x73AF;&#x90FD;&#x662F;&#x4E00;&#x4E2A;&#x65B0;&#x7684;i&#xFF0C;&#x4E0D;&#x4F1A;&#x5BF9;&#x4E4B;&#x524D;&#x7684;i&#x6709;&#x5F71;&#x54CD;&#xFF0C;js&#x5F15;&#x64CE;&#x4F1A;&#x8BB0;&#x5F55;&#x4E0A;&#x6B21;&#x904D;&#x5386;&#x7684;i&#xFF0C;&#x5E76;&#x4E14;&#x5728;&#x672C;&#x8F6E;&#x904D;&#x5386;&#x7684;&#x65F6;&#x5019;&#x6839;&#x636E;&#x4E0A;&#x6B21;&#x7684;i&#x8FDB;&#x884C;&#x8FD0;&#x7B97;
-for(let i = 0; i &lt; 5; i++) {
-let i = &apos;aaaa&apos;
-console.log(i)
-}</li>
+<li>let&#x547D;&#x4EE4;&#x548C;var&#x547D;&#x4EE4;&#x7C7B;&#x4F3C;&#xFF0C;&#x7528;&#x4E8E;&#x58F0;&#x660E;&#x53D8;&#x91CF;&#x3002;let&#x5728;es6&#x4E2D;&#x7528;&#x4E8E;&#x66FF;&#x4EE3;var&#x3002;let&#x547D;&#x4EE4;&#x58F0;&#x660E;&#x7684;&#x53D8;&#x91CF;&#x53EA;&#x5728;&#x5B83;&#x58F0;&#x660E;&#x7684;&#x4EE3;&#x7801;&#x5757;&#x4E2D;&#x751F;&#x6548;</li>
 </ol>
-<p>for(let i = 0; i &lt; 5; i++) {
-  i = &apos;aaaa&apos;
-  console.log(i)
-}</p>
-<pre><code>2. let&#x4E0D;&#x4F1A;&#x5B58;&#x5728;&#x53D8;&#x91CF;&#x63D0;&#x5347;&#xFF0C;let&#x6240;&#x58F0;&#x660E;&#x7684;&#x53D8;&#x91CF;&#x4E00;&#x5B9A;&#x8981;&#x5728;&#x58F0;&#x660E;&#x540E;&#x4F7F;&#x7528;&#x5426;&#x5219;&#x5C31;&#x4F1A;&#x62A5;&#x9519;
-3. let&#x58F0;&#x660E;&#x7684;&#x53D8;&#x91CF;&#xFF0C;&#x5728;let&#x58F0;&#x660E;&#x4E4B;&#x524D;&#x4F7F;&#x7528;&#x662F;&#x4F1A;&#x62A5;&#x9519; &#xFF08;ReferenceError&#xFF09; &#x8FD9;&#x79CD;&#x73B0;&#x8C61;&#x53EB;&#x6682;&#x65F6;&#x6027;&#x6B7B;&#x533A;&#xFF0C;&#x8FD9;&#x4E5F;&#x5C31;&#x610F;&#x5473;&#x7740;type of&#x65B9;&#x6CD5;&#x4E0D;&#x662F;&#x767E;&#x5206;&#x767E;&#x4E0D;&#x4F1A;&#x62A5;&#x9519;&#x7684;&#x54E6;
-4. &#x540C;&#x4E00;&#x4E2A;&#x53D8;&#x91CF;&#x540D;&#x4E0D;&#x5141;&#x8BB8;&#x91CD;&#x590D;&#x58F0;&#x660E;
+<pre><code class="lang-javascript"><span class="hljs-comment">// &#x5728;for&#x5FAA;&#x73AF;&#x4E2D;&#xFF0C;let&#x8BBE;&#x7F6E;&#x5FAA;&#x73AF;&#x53D8;&#x91CF;&#x7684;&#x662F;&#x4E00;&#x4E2A;&#x7236;&#x7EA7;&#x4F5C;&#x7528;&#x57DF;&#xFF0C;&#x5FAA;&#x73AF;&#x4F53;&#x4E3A;&#x5B50;&#x7EA7;&#x4F5C;&#x7528;&#x57DF; </span>
+<span class="hljs-comment">// &#x5728;for&#x5FAA;&#x73AF;&#x4E2D;&#xFF0C;let&#x58F0;&#x660E;&#x7684;i&#x6BCF;&#x6B21;&#x5FAA;&#x73AF;&#x90FD;&#x662F;&#x4E00;&#x4E2A;&#x65B0;&#x7684;i&#xFF0C;&#x4E0D;&#x4F1A;&#x5BF9;&#x4E4B;&#x524D;&#x7684;i&#x6709;&#x5F71;&#x54CD;&#xFF0C;js&#x5F15;&#x64CE;&#x4F1A;&#x8BB0;&#x5F55;&#x4E0A;&#x6B21;&#x904D;&#x5386;&#x7684;i&#xFF0C;&#x5E76;&#x4E14;&#x5728;&#x672C;&#x8F6E;&#x904D;&#x5386;&#x7684;&#x65F6;&#x5019;&#x6839;&#x636E;&#x4E0A;&#x6B21;&#x7684;i&#x8FDB;&#x884C;&#x8FD0;&#x7B97;</span>
+<span class="hljs-keyword">for</span>(<span class="hljs-keyword">let</span> i = <span class="hljs-number">0</span>; i &lt; <span class="hljs-number">5</span>; i++) {
+  <span class="hljs-keyword">let</span> i = <span class="hljs-string">&apos;aaaa&apos;</span>
+  <span class="hljs-built_in">console</span>.log(i)
+}
 
-### &#x5757;&#x7EA7;&#x522B;&#x4F5C;&#x7528;&#x57DF;
-
-### const
-1. const&#x5B9E;&#x9645;&#x4E0A;&#x4FDD;&#x8BC1;&#x7684;&#xFF0C;&#x5E76;&#x4E0D;&#x662F;&#x53D8;&#x91CF;&#x7684;&#x503C;&#x4E0D;&#x5F97;&#x6539;&#x52A8;&#xFF0C;&#x800C;&#x662F;&#x53D8;&#x91CF;&#x6307;&#x5411;&#x7684;&#x90A3;&#x4E2A;&#x5185;&#x5B58;&#x5730;&#x5740;&#x6240;&#x4FDD;&#x5B58;&#x7684;&#x6570;&#x636E;&#x4E0D;&#x5F97;&#x6539;&#x52A8;&#x3002;&#x5BF9;&#x4E8E;&#x7B80;&#x5355;&#x7C7B;&#x578B;&#x7684;&#x6570;&#x636E;&#xFF08;&#x6570;&#x503C;&#x3001;&#x5B57;&#x7B26;&#x4E32;&#x3001;&#x5E03;&#x5C14;&#x503C;&#xFF09;&#xFF0C;&#x503C;&#x5C31;&#x4FDD;&#x5B58;&#x5728;&#x53D8;&#x91CF;&#x6307;&#x5411;&#x7684;&#x90A3;&#x4E2A;&#x5185;&#x5B58;&#x5730;&#x5740;&#xFF0C;&#x56E0;&#x6B64;&#x7B49;&#x540C;&#x4E8E;&#x5E38;&#x91CF;&#x3002;&#x4F46;&#x5BF9;&#x4E8E;&#x590D;&#x5408;&#x7C7B;&#x578B;&#x7684;&#x6570;&#x636E;&#xFF08;&#x4E3B;&#x8981;&#x662F;&#x5BF9;&#x8C61;&#x548C;&#x6570;&#x7EC4;&#xFF09;&#xFF0C;&#x53D8;&#x91CF;&#x6307;&#x5411;&#x7684;&#x5185;&#x5B58;&#x5730;&#x5740;&#xFF0C;&#x4FDD;&#x5B58;&#x7684;&#x53EA;&#x662F;&#x4E00;&#x4E2A;&#x6307;&#x5411;&#x5B9E;&#x9645;&#x6570;&#x636E;&#x7684;&#x6307;&#x9488;&#xFF0C;const&#x53EA;&#x80FD;&#x4FDD;&#x8BC1;&#x8FD9;&#x4E2A;&#x6307;&#x9488;&#x662F;&#x56FA;&#x5B9A;&#x7684;&#xFF08;&#x5373;&#x603B;&#x662F;&#x6307;&#x5411;&#x53E6;&#x4E00;&#x4E2A;&#x56FA;&#x5B9A;&#x7684;&#x5730;&#x5740;&#xFF09;&#xFF0C;&#x81F3;&#x4E8E;&#x5B83;&#x6307;&#x5411;&#x7684;&#x6570;&#x636E;&#x7ED3;&#x6784;&#x662F;&#x4E0D;&#x662F;&#x53EF;&#x53D8;&#x7684;&#xFF0C;&#x5C31;&#x5B8C;&#x5168;&#x4E0D;&#x80FD;&#x63A7;&#x5236;&#x4E86;&#x3002;&#x56E0;&#x6B64;&#xFF0C;&#x5C06;&#x4E00;&#x4E2A;&#x5BF9;&#x8C61;&#x58F0;&#x660E;&#x4E3A;&#x5E38;&#x91CF;&#x5FC5;&#x987B;&#x975E;&#x5E38;&#x5C0F;&#x5FC3;&#x3002;
-2. &#x5C06;&#x5BF9;&#x8C61;&#x51BB;&#x7ED3;&#xFF0C;&#x5E94;&#x8BE5;&#x4F7F;&#x7528;Object.freeze&#x65B9;&#x6CD5;
-3. &#x51BB;&#x7ED3;&#x5BF9;&#x8C61;&#x7684;&#x7EC8;&#x6781;&#x65B9;&#x6CD5;
-```javascript
-var constantize = (obj) =&gt; {
-  Object.freeze(obj);
-  Object.keys(obj).forEach( (key, i) =&gt; {
-    if ( typeof obj[key] === &apos;object&apos; ) {
+<span class="hljs-keyword">for</span>(<span class="hljs-keyword">let</span> i = <span class="hljs-number">0</span>; i &lt; <span class="hljs-number">5</span>; i++) {
+  i = <span class="hljs-string">&apos;aaaa&apos;</span>
+  <span class="hljs-built_in">console</span>.log(i)
+}
+</code></pre>
+<ol>
+<li>let&#x4E0D;&#x4F1A;&#x5B58;&#x5728;&#x53D8;&#x91CF;&#x63D0;&#x5347;&#xFF0C;let&#x6240;&#x58F0;&#x660E;&#x7684;&#x53D8;&#x91CF;&#x4E00;&#x5B9A;&#x8981;&#x5728;&#x58F0;&#x660E;&#x540E;&#x4F7F;&#x7528;&#x5426;&#x5219;&#x5C31;&#x4F1A;&#x62A5;&#x9519;</li>
+<li>let&#x58F0;&#x660E;&#x7684;&#x53D8;&#x91CF;&#xFF0C;&#x5728;let&#x58F0;&#x660E;&#x4E4B;&#x524D;&#x4F7F;&#x7528;&#x662F;&#x4F1A;&#x62A5;&#x9519; &#xFF08;ReferenceError&#xFF09; &#x8FD9;&#x79CD;&#x73B0;&#x8C61;&#x53EB;&#x6682;&#x65F6;&#x6027;&#x6B7B;&#x533A;&#xFF0C;&#x8FD9;&#x4E5F;&#x5C31;&#x610F;&#x5473;&#x7740;type of&#x65B9;&#x6CD5;&#x4E0D;&#x662F;&#x767E;&#x5206;&#x767E;&#x4E0D;&#x4F1A;&#x62A5;&#x9519;&#x7684;&#x54E6;</li>
+<li>&#x540C;&#x4E00;&#x4E2A;&#x53D8;&#x91CF;&#x540D;&#x4E0D;&#x5141;&#x8BB8;&#x91CD;&#x590D;&#x58F0;&#x660E;</li>
+</ol>
+<h3 id="&#x5757;&#x7EA7;&#x522B;&#x4F5C;&#x7528;&#x57DF;">&#x5757;&#x7EA7;&#x522B;&#x4F5C;&#x7528;&#x57DF;</h3>
+<h3 id="const">const</h3>
+<ol>
+<li>const&#x5B9E;&#x9645;&#x4E0A;&#x4FDD;&#x8BC1;&#x7684;&#xFF0C;&#x5E76;&#x4E0D;&#x662F;&#x53D8;&#x91CF;&#x7684;&#x503C;&#x4E0D;&#x5F97;&#x6539;&#x52A8;&#xFF0C;&#x800C;&#x662F;&#x53D8;&#x91CF;&#x6307;&#x5411;&#x7684;&#x90A3;&#x4E2A;&#x5185;&#x5B58;&#x5730;&#x5740;&#x6240;&#x4FDD;&#x5B58;&#x7684;&#x6570;&#x636E;&#x4E0D;&#x5F97;&#x6539;&#x52A8;&#x3002;&#x5BF9;&#x4E8E;&#x7B80;&#x5355;&#x7C7B;&#x578B;&#x7684;&#x6570;&#x636E;&#xFF08;&#x6570;&#x503C;&#x3001;&#x5B57;&#x7B26;&#x4E32;&#x3001;&#x5E03;&#x5C14;&#x503C;&#xFF09;&#xFF0C;&#x503C;&#x5C31;&#x4FDD;&#x5B58;&#x5728;&#x53D8;&#x91CF;&#x6307;&#x5411;&#x7684;&#x90A3;&#x4E2A;&#x5185;&#x5B58;&#x5730;&#x5740;&#xFF0C;&#x56E0;&#x6B64;&#x7B49;&#x540C;&#x4E8E;&#x5E38;&#x91CF;&#x3002;&#x4F46;&#x5BF9;&#x4E8E;&#x590D;&#x5408;&#x7C7B;&#x578B;&#x7684;&#x6570;&#x636E;&#xFF08;&#x4E3B;&#x8981;&#x662F;&#x5BF9;&#x8C61;&#x548C;&#x6570;&#x7EC4;&#xFF09;&#xFF0C;&#x53D8;&#x91CF;&#x6307;&#x5411;&#x7684;&#x5185;&#x5B58;&#x5730;&#x5740;&#xFF0C;&#x4FDD;&#x5B58;&#x7684;&#x53EA;&#x662F;&#x4E00;&#x4E2A;&#x6307;&#x5411;&#x5B9E;&#x9645;&#x6570;&#x636E;&#x7684;&#x6307;&#x9488;&#xFF0C;const&#x53EA;&#x80FD;&#x4FDD;&#x8BC1;&#x8FD9;&#x4E2A;&#x6307;&#x9488;&#x662F;&#x56FA;&#x5B9A;&#x7684;&#xFF08;&#x5373;&#x603B;&#x662F;&#x6307;&#x5411;&#x53E6;&#x4E00;&#x4E2A;&#x56FA;&#x5B9A;&#x7684;&#x5730;&#x5740;&#xFF09;&#xFF0C;&#x81F3;&#x4E8E;&#x5B83;&#x6307;&#x5411;&#x7684;&#x6570;&#x636E;&#x7ED3;&#x6784;&#x662F;&#x4E0D;&#x662F;&#x53EF;&#x53D8;&#x7684;&#xFF0C;&#x5C31;&#x5B8C;&#x5168;&#x4E0D;&#x80FD;&#x63A7;&#x5236;&#x4E86;&#x3002;&#x56E0;&#x6B64;&#xFF0C;&#x5C06;&#x4E00;&#x4E2A;&#x5BF9;&#x8C61;&#x58F0;&#x660E;&#x4E3A;&#x5E38;&#x91CF;&#x5FC5;&#x987B;&#x975E;&#x5E38;&#x5C0F;&#x5FC3;&#x3002;</li>
+<li>&#x5C06;&#x5BF9;&#x8C61;&#x51BB;&#x7ED3;&#xFF0C;&#x5E94;&#x8BE5;&#x4F7F;&#x7528;Object.freeze&#x65B9;&#x6CD5;</li>
+<li>&#x51BB;&#x7ED3;&#x5BF9;&#x8C61;&#x7684;&#x7EC8;&#x6781;&#x65B9;&#x6CD5;</li>
+</ol>
+<pre><code class="lang-javascript"><span class="hljs-keyword">var</span> constantize = (obj) =&gt; {
+  <span class="hljs-built_in">Object</span>.freeze(obj);
+  <span class="hljs-built_in">Object</span>.keys(obj).forEach( (key, i) =&gt; {
+    <span class="hljs-keyword">if</span> ( <span class="hljs-keyword">typeof</span> obj[key] === <span class="hljs-string">&apos;object&apos;</span> ) {
       constantize( obj[key] );
     }
   });
 };
-</code></pre><ol>
+</code></pre>
+<ol>
 <li>&#x9876;&#x5C42;&#x5BF9;&#x8C61;&#xFF08;&#x6709;&#x7A7A;&#x4E86;&#x89E3;&#x4E0B;&#xFF09;
 let&#x547D;&#x4EE4;&#x3001;const&#x547D;&#x4EE4;&#x3001;class&#x547D;&#x4EE4;&#x58F0;&#x660E;&#x7684;&#x5168;&#x5C40;&#x53D8;&#x91CF;&#xFF0C;&#x4E0D;&#x5C5E;&#x4E8E;&#x9876;&#x5C42;&#x5BF9;&#x8C61;&#x7684;&#x5C5E;&#x6027;&#x3002;</li>
 </ol>
@@ -509,7 +512,7 @@ let&#x547D;&#x4EE4;&#x3001;const&#x547D;&#x4EE4;&#x3001;class&#x547D;&#x4EE4;&#x
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"es6/es7","level":"1.2.4","depth":2,"next":{"title":"react","level":"1.2.5","depth":2,"path":"javascript/react.md","ref":"javascript/react.md","articles":[]},"previous":{"title":"webpack","level":"1.2.3","depth":2,"path":"javascript/webpack.md","ref":"javascript/webpack.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["livereload"],"pluginsConfig":{"livereload":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"javascript/es6-es7.md","mtime":"2019-08-21T07:54:22.637Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-08-27T08:05:18.538Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"es6/es7","level":"1.2.4","depth":2,"next":{"title":"react","level":"1.2.5","depth":2,"path":"javascript/react.md","ref":"javascript/react.md","articles":[]},"previous":{"title":"webpack","level":"1.2.3","depth":2,"path":"javascript/webpack.md","ref":"javascript/webpack.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["livereload"],"pluginsConfig":{"livereload":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"javascript/es6-es7.md","mtime":"2019-08-27T08:28:49.816Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-08-27T08:29:04.919Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>
