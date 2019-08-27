@@ -63,3 +63,22 @@ Object.prototype.__proto__ === null
 
 #### __proto__
 > 绝大部分浏览器都支持这个非标准的方法访问原型，然而它并不存在于 Person.prototype 中，实际上，它是来自于 Object.prototype ，与其说是一个属性，不如说是一个 getter/setter，当使用 obj.__proto__ 时，可以理解成返回了 Object.getPrototypeOf(obj)。
+
+### JavaScript深入之词法作用域和动态作用域
+
+> 函数的作用域在函数定义的时候就决定了
+
+
+### js执行上下文栈
+
+
+### js 变量对象（vo） 活动对象）（ao）
+
+
+### 作用域链
+> 当js代码执行一段可执行代码时，会创建对应的上下文，每个上下文都有三个重要属性：
+> 1. 变量对象
+> 2. 作用域链
+> 3. this
+
+ 
