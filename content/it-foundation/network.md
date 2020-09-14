@@ -45,3 +45,6 @@
 
 ### tcp/ip
 ###
+
+## 数据库
+### 怎么查询锁的情况  innodb_locks   innodb_trx  innodb_lock_waits这三个联合查询，可以看阻塞和被阻塞
